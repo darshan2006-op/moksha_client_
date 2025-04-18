@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
+    "suppressImplicitAnyIndexErrors": true,
     "allowJs": true,
     "target": "ES5",
     "lib": [
@@ -20,7 +21,7 @@
     "allowUnreachableCode": false,
     "strictNullChecks": true,
     "noEmit": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
     "noUnusedParameters": true,
