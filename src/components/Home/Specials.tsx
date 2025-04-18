@@ -1,6 +1,6 @@
 import Container from "~common/Container";
 import styles from "./styles.module.css";
-import { MutableRefObject, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -112,9 +112,30 @@ const EleganciaTeaser = () => (
 );
 
 export default function Specials() {
+  const elm = useRef(null)
+  // useEffect(() => {
+
+    useGSAP(()=>{
+      console.log(elm)
+      let mm = gsap.matchMedia()
+      mm.add("(min-width: 999px)", () => {
+        gsap.from (elm.current, {
+          xPercent: -100,
+          scrollTrigger: {
+            trigger: elm.current,
+            start: "top center",
+            end: "center bottom",
+            scrub: 2,
+            markers: true
+          }
+        })
+      })
+    }, {dependencies: []})
+  // })
   return (
     <section className={`${styles["specials-bg"]} relative`}>
       <Container
+        ref={elm}
         className="lg:h-cover lg:max-h-[38rem] pt-8 pb-8 sm:pb-0 sm:pt-12 flex items-center justify-center"
       >
         <div className="w-full grid grid-rows-4 grid-cols-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
