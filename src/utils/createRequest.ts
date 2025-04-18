@@ -8,7 +8,7 @@ export interface RequestOptions extends Omit<RequestInit, 'body' | 'method'> {
   body?: Record<string, any>
 }
 
-export const FETCH_BASE_URL = import.meta.env.DEV ? 'http://localhost:8000' : window.location.origin
+export const FETCH_BASE_URL = import.meta.env.DEV ? 'http://localhost:8000' : 'http://35.154.48.54:8000'
 
 /**
  * Create request object for Fetch API with credentials allowed.
