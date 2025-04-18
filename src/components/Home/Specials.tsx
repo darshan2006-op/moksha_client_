@@ -15,7 +15,7 @@ const TYPE = Object.freeze({
 
 const ProNightTeaser = () => (
   <div className='relative w-full h-full'>
-    <div className='absolute z-10 origin-top-right lg:origin-top-left scale-125 xl:scale-110'>
+    <div className='absolute z-10 origin-top-right lg:origin-top-left scale-110 sm:scale-125 xl:scale-110'>
       <picture>
         <source
           srcSet='/images/home/teaser-pro/poster-256x256.webp, /images/home/teaser-pro/poster-512x512.webp 2x, /images/home/teaser-pro/poster-1080x1080.webp 3x'
@@ -29,7 +29,7 @@ const ProNightTeaser = () => (
         <img
           src='/images/home/teaser-pro/poster-1080x1080.png'
           alt='Teaser poster for Pro Night'
-          className='object-cover shadow-lg'
+          className='object-cover shadow-lg max-w-[90%] sm:max-w-full'
         />
       </picture>
     </div>
@@ -38,7 +38,7 @@ const ProNightTeaser = () => (
 
 const EdmNightTeaser = () => (
   <div className='relative w-full h-full'>
-    <div className='absolute z-20 lg:z-0 lg:-translate-y-8 lg:scale-90'>
+    <div className='absolute z-20 lg:z-0 -translate-y-2 sm:translate-y-0 lg:-translate-y-8 scale-95 sm:scale-100 lg:scale-90'>
       <picture>
         <source
           media={MEDIA.tablet}
@@ -56,7 +56,7 @@ const EdmNightTeaser = () => (
         <img
           src='/images/home/teaser-edm/poster-1200x628.png'
           alt='Teaser poster for EDM Nights'
-          className='object-cover shadow-lg'
+          className='object-cover shadow-lg max-w-[90%] sm:max-w-full'
         />
       </picture>
     </div>
@@ -65,7 +65,7 @@ const EdmNightTeaser = () => (
 
 const EleganciaTeaser = () => (
   <div className='relative w-full h-full'>
-    <div className='absolute translate-x-4 -translate-y-4 lg:translate-x-0 lg:translate-y-0 lg:origin-bottom-right lg:scale-110'>
+    <div className='absolute translate-x-2 -translate-y-2 sm:translate-x-4 sm:-translate-y-4 lg:translate-x-0 lg:translate-y-0 lg:origin-bottom-right scale-95 sm:scale-100 lg:scale-110'>
       <picture>
         <source
           media={MEDIA.tablet}
@@ -91,7 +91,7 @@ const EleganciaTeaser = () => (
         <img
           src='/images/home/teaser-elegancia/poster-1080x1080.png'
           alt='Teaser poster for Elegancia fashion show'
-          className='object-cover shadow-lg'
+          className='object-cover shadow-lg max-w-[90%] sm:max-w-full'
         />
       </picture>
     </div>
@@ -102,14 +102,14 @@ export default function Specials() {
   return (
     <section className={`${styles['specials-bg']}`}>
       <Container className='lg:h-cover lg:max-h-[38rem] pt-8 pb-8 sm:pb-0 sm:pt-12 flex items-center justify-center'>
-        <div className='w-full grid grid-rows-4 grid-cols-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-5'>
+        <div className='w-full grid grid-rows-4 grid-cols-2 sm:grid-cols-3 lg:grid-rows-2 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4'>
           <div className='col-span-2 sm:col-span-3 lg:col-span-2 xl:col-span-3'>
             <h2 className='mb-4'>
               <p className='text-lg sm:text-xl'>The</p>
-              <p className='text-5xl lg:text-6xl font-bold'>Specials</p>
+              <p className='text-4xl sm:text-5xl lg:text-6xl font-bold'>Specials</p>
             </h2>
             <div className='!max-w-lg pb-4 lg:pb-0 markdown'>
-              <p>
+              <p className='text-sm sm:text-base'>
                 Embark on a journey of creativity, passion, and excitement during the first three days of our cultural
                 fest, as we unveil extraordinary events that redefine entertainment.
               </p>

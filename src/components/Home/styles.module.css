@@ -34,6 +34,13 @@
 
 .specials-bg {
   background: transparent;
+  padding: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .specials-bg {
+    padding: 0;
+  }
 }
 
 .hero-img-shadow {

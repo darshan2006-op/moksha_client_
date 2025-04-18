@@ -94,7 +94,7 @@ export function Component() {
           <Specials />
         </div>
         <div ref={gs}>
-          <GetStarted />
+          {/* <GetStarted /> */}
         </div>
       </main>
     </>
